@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\ProductField;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
@@ -14,6 +15,6 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+Artisan::command('test', function () {
+    ProductField::insert([['product_id'=>1, 'key'=>"123", "value"=>"321"]]);
+});

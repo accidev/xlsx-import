@@ -7,5 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    use HasFactory;
+
+    public $timestamps = false;
+    protected $fillable = [
+        'external_code',
+        'name',
+        'description',
+        'price',
+        'discount',
+    ];   
+
+    public function fields(){
+        return $this->hasMany(ProductField::class);
+    }
+
+    public function image(){
+        return $this->hasOne(ProductImage::class);
+    }
 }
