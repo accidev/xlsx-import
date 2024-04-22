@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="text-center p-10">
+    <div class="text-center p-10 pb-1">
         <h1 class="font-bold text-4xl mb-5">Каталог товаров</h1>
 
         <a href="{{route('import.products')}}" class="px-6 py-2 mx-auto block w-max rounded-full text-sm text-white bg-slate-950 hover:bg-slate-800 mb-10">
