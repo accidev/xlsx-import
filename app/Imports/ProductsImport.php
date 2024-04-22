@@ -83,7 +83,7 @@ class ProductsImport implements ToCollection
                         if ($file) {
                             $file_path = 'products/images/' . time() . '_' . basename($url);
                             Storage::disk('public')->put($file_path, $file);
-                            $image['path'] = "/" . $file_path;
+                            $image['path'] = "/storage/" . $file_path;
 
                             $product_images[] = $image;
                         }
