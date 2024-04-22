@@ -1,0 +1,1 @@
+composer install && npm install && php artisan optimize && php artisan view:cache && php artisan storage:link && npx tailwindcss -i ./resources/css/app.css -o ./public/assets/css/main.css
