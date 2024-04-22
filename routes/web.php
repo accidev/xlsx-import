@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ProductController::class, 'index']);
+Route::get('/products/{id}', [ProductController::class, 'show'])->where('id', '[0-9]+');
+
 Route::get('/import', [ProductImportController::class, 'index']);
-
-
 Route::post('/import', [ProductImportController::class, 'import'])->name('import.products');

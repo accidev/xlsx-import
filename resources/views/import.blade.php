@@ -12,7 +12,7 @@
         <input type="file" required
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
             name="table">
-        <button class="py-3 mt-2 text-white bg-slate-950 hover:bg-slate-800 rounded-md">Сохранить</button>
+        <button class="py-3 mt-3 text-white bg-slate-950 hover:bg-slate-800 rounded-full">Сохранить</button>
         @if(session()->has('success'))
             <span class="text-sm font-semibold ms-auto mt-2 text-green-500">{{ session('success') }}</span>
         @endif
