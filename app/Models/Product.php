@@ -4,7 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+    /**
+ * Product
+ *
+ * @property-read \App\Models\ProductField|null $fields
+ * @property-read \App\Models\ProductImage|null $images
+ * 
+ */
 class Product extends Model
 {
 
