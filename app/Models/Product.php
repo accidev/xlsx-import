@@ -15,7 +15,7 @@ class Product extends Model
         'description',
         'price',
         'discount',
-    ];   
+    ];
 
     public function fields(){
         return $this->hasMany(ProductField::class);

@@ -55,7 +55,6 @@ class ProductsImport implements ToCollection
                 'price' => floatval($row[$main_fields['price']]),
             ]);
 
-
             $product_fields = [];
             foreach ($product_fields_headers as $key => $table_header) {
                 if ($row[$key]) {
