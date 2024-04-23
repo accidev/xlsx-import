@@ -1,0 +1,30 @@
+name: Run main-pr
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  phplint-main-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check by PHP linter
+        uses: fxpw/PHP-Lint-php8.3@master
+
+  phpstan-main-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Composer run
+        run: composer install
+
+      - name: PHPStan (php-actions)
+        uses: php-actions/phpstan@v3
+        with:
+          path: app/
