@@ -32,7 +32,7 @@
                         <div class="flex gap-2 h-[80px] mb-4">
                             @foreach ($product->images as $image)
                                 <img src="{{ $image->path }}"
-                                    class="@if ($loop->first) ring-2 @endif hover:ring-2 rounded-md ring-black product-image">
+                                    class="@if ($loop->first) ring-2 @endif cursor-pointer hover:ring-2 rounded-md ring-black product-image">
                             @endforeach
                         </div>
                     @endif
