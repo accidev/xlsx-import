@@ -22,7 +22,7 @@ class Product extends Model
         'price',
         'discount',
     ];
-
+    /* Relations */
     public function fields(){
         return $this->hasMany(ProductField::class);
     }
